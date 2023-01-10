@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/06 13:42:02 by madore            #+#    #+#             */
-/*   Updated: 2023/01/10 11:43:02 by madore           ###   ########.fr       */
+/*   Created: 2023/01/10 15:18:19 by madore            #+#    #+#             */
+/*   Updated: 2023/01/10 15:35:39 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void *ft_memset(void *b, int c, size_t len)
+unsigned int ft_strlcat(char *dest, char *src, size_t n)
 {
-	size_t i;
-	unsigned char *ptr;
+	unsigned int i;
 
 	i = 0;
-	
-	ptr = (unsigned char *)b;
-	while (i < len)
+	while (dest && dest[i] != '\0' && i < n)
+		i++;
+	while (*src && i < n)
 	{
-		ptr[i++] = (unsigned char)c;
+		dest[i++] = *src++;
 	}
-	return (b);
+	dest[i] = '\0';
+	return (i);
 }
 
 #include <stdio.h>
 
 int main(void)
 {
-	char str[30] = "Abcdefg hihi";
-	printf("Before memset => %s", str);
-	ft_memset(str, 'x', 3);
-	printf("\nAfter memset => %s\n", str);
+	char src[] = "allo";
+	char dest[] = "coucou";
+	printf("%d", ft_strlcat(dest, src, 15));
 	return (0);
 }

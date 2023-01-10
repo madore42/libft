@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/06 13:42:02 by madore            #+#    #+#             */
-/*   Updated: 2023/01/10 11:43:02 by madore           ###   ########.fr       */
+/*   Created: 2023/01/10 13:13:29 by madore            #+#    #+#             */
+/*   Updated: 2023/01/10 14:23:23 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t i;
-	unsigned char *ptr;
-
-	i = 0;
 	
-	ptr = (unsigned char *)b;
-	while (i < len)
+	i = 0;
+	if (src == NULL || dest == NULL)
+		return(NULL);
+	
+	else if (dest > src)
 	{
-		ptr[i++] = (unsigned char)c;
+		while (n > 0)
+		{
+			((char *)dest)[n] = ((char *)src)[n];
+			n--;
+		}
 	}
-	return (b);
+	else 
+		while (i < n)
+		{
+			((char *)dest)[i] = ((char *)src)[i];
+			i++;
+		}
+	return (dest);	
 }
 
 #include <stdio.h>
 
 int main(void)
 {
-	char str[30] = "Abcdefg hihi";
-	printf("Before memset => %s", str);
-	ft_memset(str, 'x', 3);
-	printf("\nAfter memset => %s\n", str);
+	char src[] = "newstring";
+	char dest[]= "oldstr";
+	ft_memmove(dest, src, 9);
+	printf("%s", dest);
 	return (0);
 }
