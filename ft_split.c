@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:14:02 by madore            #+#    #+#             */
-/*   Updated: 2023/01/10 16:57:38 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/10 21:05:13 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int ft_scan(char check, char c)
+int ft_scan(char k, char c)
 {
-	if (check == c)
+	if (k == c)
 		return (1);
 	return (0);
 }
@@ -30,7 +30,7 @@ int findnbstr(char const *str, char c)
 	{
 		while (str[i] != '\0' && ft_scan(str[i], c) == 1)
 			i++;
-		while (str[i] != '\0')
+		if (str[i] != '\0')
 			countword++;
 		while (str[i] != '\0' && ft_scan(str[i], c) == 0)
 			i++;
@@ -66,7 +66,7 @@ char **ft_split(char const *s, char c)
 	{
 		while (s && s[i] != '\0' && ft_scan(s[i], c) == 1)
 			i++;
-		split[j] = malloc(sizeof(char) * (wordlen(&s[i], c) + 1);
+		split[j] = malloc(sizeof(char) * wordlen(&s[i], c) + 1);
 		k = 0;
 		while (s[i] != '\0' && ft_scan(s[i], c) == 0)
 		{
