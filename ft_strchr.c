@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 15:36:36 by madore            #+#    #+#             */
-/*   Updated: 2023/01/11 11:28:14 by maureen          ###   ########.fr       */
+/*   Created: 2023/01/11 15:34:19 by maureen           #+#    #+#             */
+/*   Updated: 2023/01/11 16:07:37 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_toupper(int c)
+char *ft_strchr(const char *str, int c)
 {
-	if (c >= 97 && c <= 122)
-		c = c - 32;
-	return (c);
+	while (str && *str != '\0')
+	{
+		if (*str == (char)c)
+			return(char *)str;
+		str++;
+	}
+	if ((char)c == '\0')
+		return(char *)str;
+	else
+		return (NULL);
+	
 }
 
 #include <stdio.h>
 
 int main(void)
 {
-	char c = 'B';
-	printf("%c\n", ft_toupper(c));
+	const char str[] = "bonjour";
+	const char ch = 'j';
+	char *ret;
+
+	ret = ft_strchr(str, ch);
+	printf("%c\n%s", ch, ret);
 	return (0);
 }
-

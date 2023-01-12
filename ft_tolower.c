@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 15:36:36 by madore            #+#    #+#             */
-/*   Updated: 2023/01/11 11:28:14 by maureen          ###   ########.fr       */
+/*   Created: 2023/01/11 11:29:21 by maureen           #+#    #+#             */
+/*   Updated: 2023/01/11 11:33:22 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int ft_toupper(int c)
+int ft_tolower(int c)
 {
-	if (c >= 97 && c <= 122)
-		c = c - 32;
+	if (c >= 65 && c <= 90)
+		c = c + 32;
 	return (c);
 }
 
@@ -23,8 +21,7 @@ int ft_toupper(int c)
 
 int main(void)
 {
-	char c = 'B';
-	printf("%c\n", ft_toupper(c));
-	return (0);
+	char c = 'A';
+	printf("%c\n", ft_tolower(c));
+	return(0);
 }
-
