@@ -1,7 +1,9 @@
 NAME = libft.a
 SRC =	ft_atoi.c \
 		ft_bzero.c \
-		ft_calloc.c
+		ft_calloc.c \
+		ft_strlen.c \
+		ft_strtrim.c
 OBJ = $(SRC:%.c=%.o)
 MAIN = test
 CFLAGS = -Wall -Werror -Wextra

@@ -3,9 +3,9 @@
 
 int main(void)
 {
-	char *str = ft_calloc(5, sizeof(char));
+	char str[] = "testcoucou bonjour test";
+	char set[] = "test";
 
-	str = "Salutsadfsag";
-	printf("%s\n", str);
+	printf("%s\n", ft_strtrim(str, set));
 	return(0);
 }
