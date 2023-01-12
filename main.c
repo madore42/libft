@@ -3,6 +3,9 @@
 
 int main(void)
 {
-	printf("%d\n", ft_atoi("-11265"));
+	char *str = ft_calloc(5, sizeof(char));
+
+	str = "Salutsadfsag";
+	printf("%s\n", str);
 	return(0);
 }

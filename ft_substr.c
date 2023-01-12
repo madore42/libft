@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 16:28:27 by maureen           #+#    #+#             */
-/*   Updated: 2023/01/12 11:27:32 by madore           ###   ########.fr       */
+/*   Created: 2023/01/12 14:23:15 by madore            #+#    #+#             */
+/*   Updated: 2023/01/12 15:07:43 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
-char *ft_strrchr(const char *str, int c)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	while (str && *str != '\0')
-		str++;
-	while (str)
-	{
-		if (*str == (char)c)
-			return(char *)str;
-		str--;
-	}
-	if ((char)c == '\0')
-		return(char *)str;
-	else
+	char *substr;
+	unsigned int i;
+	
+	i = 0;
+	substr = malloc(sizeof(char) * (len + 1));
+	if (substr == NULL)
 		return (NULL);
+	while (s && s[i] != '\0' && i < len)
+	{
+		substr[i] = s[i + start];
+		i++;
+	}
+	substr[i] = '\0';
+	return (substr);
 }
+
+#include <stdio.h>
 
 int main(void)
 {
-	const char str[] = "banane";
-	const char ch = 'n';
-	char *ret;
+	char str[] = "c'est la tempete dehors";
 
-	ret = ft_strrchr(str, ch);
-	printf("%c\n%s", ch, ret);
+	printf("%s", ft_substr(str, 3, 8));
 	return (0);
 }
-

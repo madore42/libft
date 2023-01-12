@@ -1,18 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 12:12:13 by maureen           #+#    #+#             */
-/*   Updated: 2023/01/12 15:33:03 by madore           ###   ########.fr       */
+/*   Created: 2023/01/12 13:37:03 by madore            #+#    #+#             */
+/*   Updated: 2023/01/12 13:38:49 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 
-int ft_atoi(char *str);
-void *ft_bzero(void *s, size_t n);
-void *ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *src)
+{
+	int		size;
+	int		i;
+	char	*dup;
+
+	i = 0;
+	size = 0;
+	while (src && src[size] != '\0')
+		size++;
+	dup = malloc(sizeof(char) * (size + 1));
+	if (dup == NULL)
+		return (NULL);
+	while (src[i] != '\0')
+	{
+		dup[i] = src[i];
+		i++;
+	}
+	dup[i] = '\0';
+	return (dup);
+}
+
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	if (argc == 2)
+		printf("%s", ft_strdup(argv[1]));
+}
