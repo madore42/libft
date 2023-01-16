@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:24:35 by madore            #+#    #+#             */
-/*   Updated: 2023/01/10 12:46:45 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/13 21:40:28 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:54:16 by madore            #+#    #+#             */
-/*   Updated: 2023/01/12 13:11:24 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/13 21:49:11 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
@@ -30,9 +30,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t n)
 		return (NULL);
 	
 }
-
-#include <stdio.h>
-
+/*
 int	main(void)
 {
 	char *str;
@@ -41,4 +39,4 @@ int	main(void)
 	str = "salut ca va";
 	to_find = "ca";
 	printf("%s", ft_strnstr(str, to_find, 8));
-}
+}*/

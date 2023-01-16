@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:49:12 by madore            #+#    #+#             */
-/*   Updated: 2023/01/12 18:03:09 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/13 12:35:09 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	ft_scan(char c, char const *charset)
 	return (0);
 }
 
+/* strtrim remove the set from the string at the beginning and the end of str*/
 char *ft_strtrim(char const *s1, char const *set)
 {
 	char *trim;

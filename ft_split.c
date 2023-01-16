@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:14:02 by madore            #+#    #+#             */
-/*   Updated: 2023/01/12 14:05:56 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/13 21:54:00 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int findnbstr(char const *str, char c)
+static int findnbstr(char const *str, char c)
 {
 	int i;
 	int countword;
@@ -31,7 +31,7 @@ int findnbstr(char const *str, char c)
 	return (countword);
 }
 
-int wordlen(char const *str, char c)
+static int wordlen(char const *str, char c)
 {
 	int i;
 
@@ -71,9 +71,7 @@ char **ft_split(char const *s, char c)
 	split[j] = 0;
 	return (split);
 }
-
-#include <stdio.h>
-
+/*
 int main(int argc, char **argv)
 {
 	char **splity;
@@ -86,4 +84,4 @@ int main(int argc, char **argv)
 		while (splity[i])
 			printf("%s\n", splity[i++]);
 	}
-}
+}*/

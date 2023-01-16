@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:37:03 by madore            #+#    #+#             */
-/*   Updated: 2023/01/12 13:38:49 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/13 21:46:01 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *src)
 {
@@ -33,11 +33,9 @@ char	*ft_strdup(const char *src)
 	dup[i] = '\0';
 	return (dup);
 }
-
-#include <stdio.h>
-
+/*
 int main(int argc, char **argv)
 {
 	if (argc == 2)
 		printf("%s", ft_strdup(argv[1]));
-}
+}*/

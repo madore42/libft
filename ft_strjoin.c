@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:08:27 by madore            #+#    #+#             */
-/*   Updated: 2023/01/12 15:10:15 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/13 21:45:39 by maureen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
@@ -67,14 +67,11 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	join[joinlen] = '\0';
 	return (join);
 }
-
-#include <stdio.h>
-
+/*
 int main(void)
 {
 	char *strs[] = {"allo", "bonjour ", "coucou"};
 	char s[] = "TEST";
 	char *s1 = ft_strjoin(3, strs, s);
 	printf("%s\n", s1);
-}
-
+}*/
