@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:15:09 by madore            #+#    #+#             */
-/*   Updated: 2023/01/13 21:52:36 by maureen          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:57:36 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		c = c - 32;
@@ -25,4 +25,3 @@ int main(void)
 	printf("%c\n", ft_toupper(c));
 	return (0);
 }*/
-

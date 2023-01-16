@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:34:19 by madore            #+#    #+#             */
-/*   Updated: 2023/01/13 21:39:33 by maureen          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:00:12 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= ' ' && c <= '~')
-        return (c);
-    return(0);
+	if (c >= ' ' && c <= '~')
+		return (c);
+	return (0);
 }

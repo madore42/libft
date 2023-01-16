@@ -3,23 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:13:29 by madore            #+#    #+#             */
-/*   Updated: 2023/01/13 21:40:51 by maureen          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:13:59 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	if (src == NULL || dest == NULL)
-		return(NULL);
-	
+		return (NULL);
 	else if (dest > src)
 	{
 		while (n > 0)
@@ -28,17 +27,15 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 			n--;
 		}
 	}
-	else 
+	else
 		while (i < n)
 		{
 			((char *)dest)[i] = ((char *)src)[i];
 			i++;
 		}
-	return (dest);	
+	return (dest);
 }
-
-#include <stdio.h>
-
+/*
 int main(void)
 {
 	char src[] = "newstring";
@@ -46,4 +43,4 @@ int main(void)
 	ft_memmove(dest, src, 9);
 	printf("%s", dest);
 	return (0);
-}
+}*/

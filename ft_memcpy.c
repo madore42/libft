@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:24:35 by madore            #+#    #+#             */
-/*   Updated: 2023/01/13 21:40:28 by maureen          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:10:23 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t i;
-	i = 0;
+	size_t	i;
 
+	i = 0;
 	if (src == NULL || dest == NULL)
-		return(NULL);
+		return (NULL);
 	while (i < n)
 	{
 		((char *)dest)[i] = ((char *)src)[i];
@@ -26,9 +26,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-#include <stdio.h>
-
+/*
 int main(void)
 {
 	char src[] = "allo coucou";
@@ -37,4 +35,4 @@ int main(void)
 	ft_memcpy(dest, src, 6);
 	printf("%s", dest);
 	return (0);
-}
+}*/

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:08:27 by madore            #+#    #+#             */
-/*   Updated: 2023/01/13 21:45:39 by maureen          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:40:11 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+static int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	findsize(int size, char **str, char *sep)
+static int	findsize(char **str, char *sep)
 {
 	int	seplen;
 	int	strlen;
@@ -38,30 +38,28 @@ int	findsize(int size, char **str, char *sep)
 	return (strlen + seplen * (size - 1));
 }
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*join;
 	int		joinlen;
 	int		i;
 	int		j;
 
-	if (size == 0)
-		return (malloc(sizeof(char) * 1));
-	join = malloc(sizeof(char) * (findsize(size, strs, sep) + 1));
+	join = malloc(sizeof(char) * (findsize(s1, s2) + 1));
 	if (join == NULL)
 		return (NULL);
 	i = -1;
 	joinlen = 0;
-	while (++i < size && strs[i])
+	while (++i < size && s1[i])
 	{
 		j = 0;
-		while (strs[i][j] != '\0')
-			join[joinlen++] = strs[i][j++];
+		while (s1[i][j] != '\0')
+			join[joinlen++] = s1[i][j++];
 		if (i < size -1)
 		{
 			j = 0;
-			while (sep && sep[j])
-				join[joinlen++] = sep[j++];
+			while (s2 && s2[j])
+				join[joinlen++] = s2[j++];
 		}
 	}
 	join[joinlen] = '\0';
@@ -72,6 +70,6 @@ int main(void)
 {
 	char *strs[] = {"allo", "bonjour ", "coucou"};
 	char s[] = "TEST";
-	char *s1 = ft_strjoin(3, strs, s);
+	char *s1 = ft_strjoin(strs, s);
 	printf("%s\n", s1);
 }*/

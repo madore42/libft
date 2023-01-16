@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 15:15:30 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 13:53:32 by madore           ###   ########.fr       */
+/*   Created: 2023/01/16 13:05:53 by madore            #+#    #+#             */
+/*   Updated: 2023/01/16 14:28:14 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+static void	ft_putchar(char c, int fd)
 {
-	int	i;
-	int	num;
-	int	ngv;
+	write(fd, &c, 1);
+}
 
-	i = 0;
-	num = 0;
-	ngv = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == ' '))
-		i++;
-	while (str[i] == '-' || str[i] == '+')
+void	ft_putnbr_fd(int nb, int fd)
+{
+	if (nb == -2147483648)
 	{
-		if (str[i] == '-')
-			ngv = ngv * -1;
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	if (nb < 0)
 	{
-		num = num * 10 + str[i] - 48;
-		i++;
+		ft_putchar('-', fd);
+		nb = -nb;
 	}
-	return (num * ngv);
+	if (nb > 9)
+		ft_putnbr(nb / 10);
+	ft_putchar(nb % 10 + 48, fd);
 }

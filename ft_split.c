@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:14:02 by madore            #+#    #+#             */
-/*   Updated: 2023/01/13 21:54:00 by maureen          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:36:47 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int findnbstr(char const *str, char c)
+static int	findnbstr(char const *str, char c)
 {
-	int i;
-	int countword;
-	
+	int	i;
+	int	countword;
+
 	i = 0;
 	countword = 0;
 	while (str && str[i] != '\0')
@@ -31,9 +31,9 @@ static int findnbstr(char const *str, char c)
 	return (countword);
 }
 
-static int wordlen(char const *str, char c)
+static int	wordlen(char const *str, char c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] && str[i] != c)
@@ -41,13 +41,13 @@ static int wordlen(char const *str, char c)
 	return (i);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **split;
-	int nbstr;
-	int j;
-	int i;
-	int k;
+	char	**split;
+	int		nbstr;
+	int		j;
+	int		i;
+	int		k;
 
 	nbstr = findnbstr(s, c);
 	split = malloc(sizeof(char *) * (nbstr + 1));
@@ -62,9 +62,7 @@ char **ft_split(char const *s, char c)
 		split[j] = malloc(sizeof(char) * wordlen(&s[i], c) + 1);
 		k = 0;
 		while (s[i] != '\0' && s[i] != c)
-		{
 			split[j][k++] = s[i++];
-		}
 		split[j][k] = '\0';
 		j++;
 	}

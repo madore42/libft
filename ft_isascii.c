@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:28:19 by madore            #+#    #+#             */
-/*   Updated: 2023/01/13 21:38:31 by maureen          ###   ########.fr       */
+/*   Updated: 2023/01/16 14:00:50 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 0177)
-        return(c);
-    return(0);
+	if (c >= 0 && c <= 0177)
+		return (c);
+	return (0);
 }
 
 //return value ?
