@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 16:28:27 by maureen           #+#    #+#             */
-/*   Updated: 2023/01/16 14:52:32 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/17 17:12:02 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
+	if (str == NULL)
+		return (NULL);
 	while (str && *str != '\0')
 		str++;
 	while (str)
@@ -24,8 +26,6 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	if ((char) c == '\0')
 		return ((char *)str);
-	else
-		return (NULL);
 }
 /*
 int main(void)

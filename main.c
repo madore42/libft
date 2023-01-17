@@ -3,9 +3,9 @@
 
 int main(void)
 {
-	char str[] = "testcoucou bonjour test";
-	char set[] = "test";
+	char str[] = "coucou bonjour";
 
-	printf("%s\n", ft_strtrim(str, set));
+	ft_strmapi(str, ft_toupper);
+	printf("%s", str);
 	return(0);
 }

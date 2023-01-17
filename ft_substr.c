@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:23:15 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:57:13 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/17 13:13:06 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*substr;
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	substr = malloc(sizeof(char) * (len + 1));
 	if (substr == NULL)
 		return (NULL);
-	while (s && s[i] != '\0' && i < len)
+	while (start < ft_strlen(s) && s[i] != '\0' && i < len)
 	{
 		substr[i] = s[i + start];
 		i++;

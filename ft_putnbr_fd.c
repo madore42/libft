@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 13:05:53 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:28:14 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/17 13:11:46 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void	ft_putnbr_fd(int nb, int fd)
 		nb = -nb;
 	}
 	if (nb > 9)
-		ft_putnbr(nb / 10);
+		ft_putnbr_fd(nb / 10, fd);
 	ft_putchar(nb % 10 + 48, fd);
 }

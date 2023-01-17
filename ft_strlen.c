@@ -6,13 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:37:08 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:48:22 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/17 13:13:47 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 

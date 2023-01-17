@@ -6,31 +6,37 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:18:19 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:40:35 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/17 16:51:47 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, size_t n)
+size_t	ft_strlcat(char *dest, char *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	while (dest && dest[i] != '\0' && i < n)
+	if (dest == NULL || src == NULL)
+		return (0);
+	while (dest && dest[i] != '\0')
 		i++;
-	while (*src && i < n)
+	if (n <= i)
+		return(ft_strlen(src) + n);
+	while (*src && i < (n - 1))
 	{
 		dest[i++] = *src++;
 	}
 	dest[i] = '\0';
 	return (i);
 }
-/*
+
+#include <stdio.h>
+
 int main(void)
 {
 	char src[] = "allo";
 	char dest[] = "coucou";
-	printf("%d", ft_strlcat(dest, src, 15));
+	printf("%zu", ft_strlcat(dest, src, 6));
 	return (0);
-}*/
+}

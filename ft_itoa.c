@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:06:00 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:24:07 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/17 17:02:09 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_size(int n)
 	int	size;
 
 	size = 1;
-	while (n > 9 && n < -9)
+	while (n > 9 || n < -9)
 	{
 		n = n / 10;
 		size++;
@@ -34,7 +34,10 @@ char	*ft_itoa(int n)
 	long int	nb;
 
 	size = ft_size(n);
-	str = malloc(sizeof(char) * (size + 1));
+	str = ft_calloc(size + 1, sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	str[size] = '\0';
 	nb = n;
 	if (nb == 0)
 		str[0] = '0';
@@ -51,3 +54,11 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+// 	char *res = ft_itoa(-756234756);
+// 	printf("%s", res);
+// }

@@ -6,13 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:52:05 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:39:25 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/17 12:36:38 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
-{
+// void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+// {
 	
-}
+// }
