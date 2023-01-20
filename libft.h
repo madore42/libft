@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:12:13 by maureen           #+#    #+#             */
-/*   Updated: 2023/01/17 16:19:11 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/20 13:47:25 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char			*ft_strchr(const char *str, int c);
 char			*ft_strdup(const char *src);
 //void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 //char			*ft_strjoin(int size, char **strs, char *sep); 
-size_t			ft_strlcat(char *dest, char *src, size_t n);
+size_t			ft_strlcat(char *dest, const char *src, size_t n);
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
 size_t			ft_strlen(const char *s);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));

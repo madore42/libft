@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:08:27 by madore            #+#    #+#             */
-/*   Updated: 2023/01/17 12:36:24 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/20 13:06:14 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 // 	i = 0;
 // 	strlen = 0;
 // 	seplen = ft_strlen(sep);
-// 	while (i < size)
+// 	while (str && str[i] != '\0')
 // 	{
 // 		strlen = strlen + ft_strlen(str[i++]);
 // 	}
@@ -65,11 +65,11 @@
 // 	join[joinlen] = '\0';
 // 	return (join);
 // }
-// /*
-// int main(void)
-// {
-// 	char *strs[] = {"allo", "bonjour ", "coucou"};
-// 	char s[] = "TEST";
-// 	char *s1 = ft_strjoin(strs, s);
-// 	printf("%s\n", s1);
-// }*/
+/*
+int main(void)
+{
+	char *strs[] = {"allo", "bonjour ", "coucou"};
+	char s[] = "TEST";
+	char *s1 = ft_strjoin(strs, s);
+	printf("%s\n", s1);
+}*/

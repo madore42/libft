@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:13:29 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:13:59 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/20 11:59:00 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,14 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	return (dest);
 }
-/*
+
+#include <stdio.h>
+
 int main(void)
 {
-	char src[] = "newstring";
-	char dest[]= "oldstr";
-	ft_memmove(dest, src, 9);
+	char src[] = "this is a good nyancat !\r\n";
+	char dest[0xF0];
+	ft_memmove(dest, src, 33);
 	printf("%s", dest);
 	return (0);
-}*/
+}

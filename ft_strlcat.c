@@ -6,37 +6,40 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:18:19 by madore            #+#    #+#             */
-/*   Updated: 2023/01/17 16:51:47 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/20 14:27:24 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
+	size_t	j;
 
 	i = 0;
-	if (dest == NULL || src == NULL)
+	j = 0;
+	if (dst == NULL || src == NULL)
 		return (0);
-	while (dest && dest[i] != '\0')
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (dst && dst[i] != '\0')
 		i++;
-	if (n <= i)
-		return(ft_strlen(src) + n);
-	while (*src && i < (n - 1))
-	{
-		dest[i++] = *src++;
-	}
-	dest[i] = '\0';
-	return (i);
+	if (dstsize < i)
+		return(ft_strlen(src) + dstsize);
+	while (src[j] && i < (dstsize - 1))
+		dst[i++] = src[j++];
+	dst[i] = '\0';
+	return (ft_strlen(src) + i - j);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-	char src[] = "allo";
-	char dest[] = "coucou";
-	printf("%zu", ft_strlcat(dest, src, 6));
-	return (0);
-}
+// int main(void)
+// {
+// 	char src[] = "the cake is a lie !\0I'm hidden lol\r\n";
+// 	char dest[] = "there is no stars in the sky";
+// 	size_t max = ft_strlen(src) + ft_strlen(dest);
+// 	printf("%zu", ft_strlcat(dest, src, max));
+// 	return (0);
+// }
