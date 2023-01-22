@@ -6,13 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:08:27 by madore            #+#    #+#             */
-/*   Updated: 2023/01/20 13:06:14 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/22 15:57:34 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "libft.h"
 
-// static int	ft_strlen(char *str)
+// static int	find_strlen(char const *str)
 // {
 // 	int	i;
 
@@ -22,7 +22,7 @@
 // 	return (i);
 // }
 
-// static int	findsize(char **str, char *sep)
+// static int	findsize(char const *str, char const *sep)
 // {
 // 	int	seplen;
 // 	int	strlen;
@@ -30,12 +30,12 @@
 
 // 	i = 0;
 // 	strlen = 0;
-// 	seplen = ft_strlen(sep);
+// 	seplen = find_strlen(sep);
 // 	while (str && str[i] != '\0')
 // 	{
-// 		strlen = strlen + ft_strlen(str[i++]);
+// 		strlen = strlen + find_strlen(&str[i++]);
 // 	}
-// 	return (strlen + seplen * (size - 1));
+// 	return (strlen + seplen);
 // }
 
 // char	*ft_strjoin(char const *s1, char const *s2)
@@ -44,17 +44,19 @@
 // 	int		joinlen;
 // 	int		i;
 // 	int		j;
-
-// 	join = malloc(sizeof(char) * (findsize(s1, s2) + 1));
+// 	int		size;
+	
+// 	size = findsize(s1, s2);
+// 	join = malloc(sizeof(char) * (size + 1));
 // 	if (join == NULL)
 // 		return (NULL);
 // 	i = -1;
 // 	joinlen = 0;
-// 	while (++i < size && s1[i])
+// 	while (++i < size && s1[j])
 // 	{
 // 		j = 0;
-// 		while (s1[i][j] != '\0')
-// 			join[joinlen++] = s1[i][j++];
+// 		while (s1[j] != '\0')
+// 			join[joinlen++] = s1[j++];
 // 		if (i < size -1)
 // 		{
 // 			j = 0;
@@ -65,11 +67,13 @@
 // 	join[joinlen] = '\0';
 // 	return (join);
 // }
-/*
-int main(void)
-{
-	char *strs[] = {"allo", "bonjour ", "coucou"};
-	char s[] = "TEST";
-	char *s1 = ft_strjoin(strs, s);
-	printf("%s\n", s1);
-}*/
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+// 	char const strs[] = {"allo", "bonjour ", "coucou"};
+// 	char const s[] = "TEST";
+// 	char const *s1 = ft_strjoin(strs, s);
+// 	printf("%s\n", s1);
+// }

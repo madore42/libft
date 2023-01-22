@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:14:02 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:36:47 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/22 16:28:51 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char	**ft_split(char const *s, char c)
 		while (s && s[i] != '\0' && s[i] == c)
 			i++;
 		split[j] = malloc(sizeof(char) * wordlen(&s[i], c) + 1);
+		if (split[j] == NULL)
+			return (NULL);
 		k = 0;
 		while (s[i] != '\0' && s[i] != c)
 			split[j][k++] = s[i++];

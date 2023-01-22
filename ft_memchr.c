@@ -6,21 +6,25 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:34:53 by madore            #+#    #+#             */
-/*   Updated: 2023/01/17 12:35:43 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/22 18:09:49 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// void	*ft_memchr(const void *str, int c, size_t n)
-// {
-	
-// }
+void	*ft_memchr(const void *str, int c, size_t n)
+{
+	unsigned char	*s;
 
-// #include <stdio.h>
-
-// int main(void)
-// {
-
-// 	return(0);
-// }
+	s = (unsigned char *)str;
+	if (n == 0)
+		return (NULL);
+	while (s && n > 0)
+	{
+		if (*s == (unsigned char)c)
+			return (s);
+		s++;
+		n--;
+	}
+	return (NULL);
+}

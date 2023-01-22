@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:13:29 by madore            #+#    #+#             */
-/*   Updated: 2023/01/20 11:59:00 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/22 15:14:15 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,40 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	char		*d;
+	const char	*s;
 
-	i = 0;
-	if (src == NULL || dest == NULL)
+	d = (char *)dest;
+	s = (const char *)src;
+	if (src == NULL && dest == NULL)
 		return (NULL);
-	else if (dest > src)
+	else if (d < s)
 	{
 		while (n > 0)
 		{
-			((char *)dest)[n] = ((char *)src)[n];
+			*d++ = *s++;
 			n--;
 		}
 	}
 	else
-		while (i < n)
+	{
+		while (n > 0)
 		{
-			((char *)dest)[i] = ((char *)src)[i];
-			i++;
+			d[n - 1] = s[n - 1];
+			n--;
 		}
+	}
 	return (dest);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-	char src[] = "this is a good nyancat !\r\n";
-	char dest[0xF0];
-	ft_memmove(dest, src, 33);
-	printf("%s", dest);
-	return (0);
-}
+// int main(void)
+// {
+// 	char src[] = "thi\xffs i\xfas \0a g\xde\xadood \0nyan\0cat\0 !\r\n";
+// 	char dest[0xF0];
+// 	int size = 33;
+// 	ft_memmove(dest, src, size);
+// 	printf("%s", dest);
+// 	return (0);
+// }
