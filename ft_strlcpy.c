@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:24:03 by madore            #+#    #+#             */
-/*   Updated: 2023/01/17 16:14:08 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/23 15:08:03 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
-	size_t j;
+	size_t	j;
 
 	i = 0;
 	j = ft_strlen(src);
@@ -31,7 +31,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		dest[i] = '\0';
 	}
 	return (j);
-
 }
 /*
 int main(void)

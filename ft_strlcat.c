@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:18:19 by madore            #+#    #+#             */
-/*   Updated: 2023/01/20 14:27:24 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/23 15:07:43 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while (dst && dst[i] != '\0')
 		i++;
 	if (dstsize < i)
-		return(ft_strlen(src) + dstsize);
+		return (ft_strlen(src) + dstsize);
 	while (src[j] && i < (dstsize - 1))
 		dst[i++] = src[j++];
 	dst[i] = '\0';

@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:54:16 by madore            #+#    #+#             */
-/*   Updated: 2023/01/20 14:57:03 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/23 15:08:55 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	char			c;
 	unsigned int	i;
-	size_t	needlelen;
+	size_t			needlelen;
 
 	i = 0;
 	c = *needle;
@@ -32,13 +32,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	else
 		return (NULL);
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char *s1 = "abcdefgh";
-// 	char *s2 = "abc";
-	
-// 	printf("%s", ft_strnstr(s1, s2, 3));
-// }
