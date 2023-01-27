@@ -6,13 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:15:30 by madore            #+#    #+#             */
-/*   Updated: 2023/01/17 15:55:04 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/26 14:42:08 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	num;

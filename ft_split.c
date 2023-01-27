@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:14:02 by madore            #+#    #+#             */
-/*   Updated: 2023/01/22 16:28:51 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/26 16:26:49 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ char	**ft_split(char const *s, char c)
 	int		k;
 
 	nbstr = findnbstr(s, c);
+	if (s == NULL)
+		return (NULL);
 	split = malloc(sizeof(char *) * (nbstr + 1));
 	if (split == NULL)
 		return (NULL);

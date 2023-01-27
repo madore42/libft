@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/24 12:47:46 by madore            #+#    #+#             */
-/*   Updated: 2023/01/26 16:32:27 by madore           ###   ########.fr       */
+/*   Created: 2023/01/26 14:46:14 by madore            #+#    #+#             */
+/*   Updated: 2023/01/26 17:51:00 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* alloue (avec malloc) et renvoie un nouvel element. la variable 
-membre 'content' est initialisée à l'aide de la valeur du parametre 'content'.
-la variable 'next' est initialise a null*/
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*tmp;
 
-	tmp = (t_list *)malloc(sizeof(*tmp));
-	if (tmp == NULL)
-		return (NULL);
-	tmp -> content = content;
-	tmp->next = NULL;
-	return (tmp);
+/*lst to free, del function adress allowing to free data. 
+next memory should not be free*/
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	
 }
