@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 14:46:14 by madore            #+#    #+#             */
-/*   Updated: 2023/01/26 17:51:00 by madore           ###   ########.fr       */
+/*   Updated: 2023/01/31 15:59:07 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,8 @@ next memory should not be free*/
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	
+	if (lst == NULL || del == NULL)
+		return ;
+	del(lst->content);
+	free(lst);
 }

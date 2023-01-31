@@ -1,4 +1,17 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: madore <madore@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/31 14:36:15 by madore            #+#    #+#              #
+#    Updated: 2023/01/31 16:44:52 by madore           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
+BONUS = libft_bonus.a
 SRC =	ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
@@ -31,32 +44,45 @@ SRC =	ft_atoi.c \
 		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c \
-		ft_lstnew_bonus.c \
-		ft_lstadd_front_bonus.c \
-		ft_lstsize_bonus.c \
-		ft_lstlast_bonus.c \
-		ft_lstadd_back_bonus.c
+		ft_toupper.c 
+
+SRC_BONUS =	ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c
 
 OBJ = $(SRC:%.c=%.o)
+OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
 MAIN = test
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 all : $(NAME) 
 	
 $(NAME) : $(OBJ) 
 	ar -rcs $(NAME) $(OBJ)
+	
+bonus : $(BONUS)
+
+$(BONUS) : $(OBJ_BONUS) $(OBJ)
+	ar -rcs $(BONUS) $(OBJ_BONUS) $(OBJ)
 
 clean :
 	rm -f $(OBJ)
-
+	rm -f $(OBJ_BONUS)
 re : clean 
 	make
+
+fclean : clean
+	rm -f $(NAME)
+	rm -f $(BONUS)
 
 $(MAIN): $(NAME)
 	gcc $(CFLAGS) $(NAME) main.c -o test
 
-fclean : clean
-	rm -f $(NAME)
-
-exe : $(MAIN)
+exe: $(MAIN)
 	./test
+
+.PHONY: all clean fclean re bonus

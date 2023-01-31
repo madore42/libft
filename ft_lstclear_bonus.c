@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 11:28:55 by madore            #+#    #+#             */
-/*   Updated: 2023/01/31 15:19:34 by madore           ###   ########.fr       */
+/*   Created: 2023/01/31 16:06:31 by madore            #+#    #+#             */
+/*   Updated: 2023/01/31 16:45:26 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	size_t	i;
+	t_list	*tmp;
 
-	i = 0;
-	if (!s1 || !s2 || !n)
-		return (0);
-	while ((s1[i] && s2[i]) && i < n)
+	*tmp = **lst;
+	if (lst == NULL || del == NULL)
+		return ;
+	while (tmp->next != NULL)
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
+		del(tmp->content);
+		free(tmp);
+		tmp = tmp->next;
 	}
-	if (i != n)
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	else
-		return (0);
+	lst = NULL;
 }
