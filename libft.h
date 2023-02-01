@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:12:13 by maureen           #+#    #+#             */
-/*   Updated: 2023/01/31 16:44:32 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/01 15:54:36 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **lst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
 int				ft_atoi(const char *str);
 void			*ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);
@@ -50,7 +51,7 @@ void			ft_putstr_fd(char *str, int fd);
 char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *str, int c);
 char			*ft_strdup(const char *src);
-//void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strjoin(char const *s1, char const *s2);
 size_t			ft_strlcat(char *dest, const char *src, size_t n);
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);

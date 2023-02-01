@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 12:52:05 by madore            #+#    #+#             */
-/*   Updated: 2023/02/01 13:44:23 by madore           ###   ########.fr       */
+/*   Created: 2023/02/01 13:21:06 by madore            #+#    #+#             */
+/*   Updated: 2023/02/01 15:50:56 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*apply function 'f' at every character of the string given */
-
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
-
-	i = 0;
-	while (s && s[i] != '\0')
+	if (lst == NULL || f == NULL)
+		return ;
+	while (lst->next != NULL)
 	{
-		f(i, &s[i]);
-		i++;
+		f(lst->next);
+		lst = lst->next;
 	}
 }

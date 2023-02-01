@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 16:06:31 by madore            #+#    #+#             */
-/*   Updated: 2023/01/31 16:45:26 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/01 16:00:53 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
-	*tmp = **lst;
+	tmp = *lst;
 	if (lst == NULL || del == NULL)
 		return ;
 	while (tmp->next != NULL)
@@ -25,5 +25,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		free(tmp);
 		tmp = tmp->next;
 	}
-	lst = NULL;
+	tmp->next = NULL;
 }

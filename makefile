@@ -6,7 +6,7 @@
 #    By: madore <madore@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 14:36:15 by madore            #+#    #+#              #
-#    Updated: 2023/01/31 16:44:52 by madore           ###   ########.fr        #
+#    Updated: 2023/02/01 15:54:26 by madore           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC =	ft_atoi.c \
 		ft_split.c \
 		ft_strchr.c \
 		ft_strdup.c \
+		ft_striteri.c \
 		ft_strjoin.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \
@@ -44,7 +45,15 @@ SRC =	ft_atoi.c \
 		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c 
+		ft_toupper.c \
+		ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstclear_bonus.c \
+		ft_lstiter_bonus.c 
 
 SRC_BONUS =	ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
@@ -52,7 +61,7 @@ SRC_BONUS =	ft_lstnew_bonus.c \
 			ft_lstlast_bonus.c \
 			ft_lstadd_back_bonus.c \
 			ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c
+			ft_lstiter_bonus.c 
 
 OBJ = $(SRC:%.c=%.o)
 OBJ_BONUS = $(SRC_BONUS:%.c=%.o)
