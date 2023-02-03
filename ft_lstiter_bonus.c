@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:21:06 by madore            #+#    #+#             */
-/*   Updated: 2023/02/01 15:50:56 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/03 12:57:23 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst == NULL || f == NULL)
 		return ;
-	while (lst->next != NULL)
+	while (lst != NULL)
 	{
-		f(lst->next);
+		f(lst->content);
 		lst = lst->next;
 	}
 }
