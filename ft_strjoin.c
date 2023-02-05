@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:08:27 by madore            #+#    #+#             */
-/*   Updated: 2023/01/26 16:28:17 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:43:17 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[joinlen] = '\0';
 	return (join);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char const strs[] = "bon";
-// 	char const s[] = "jour";
-// 	char const *s1 = ft_strjoin(strs, s);
-// 	printf("%s\n", s1);
-// }

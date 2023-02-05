@@ -6,7 +6,7 @@
 #    By: madore <madore@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 14:36:15 by madore            #+#    #+#              #
-#    Updated: 2023/02/03 13:08:33 by madore           ###   ########.fr        #
+#    Updated: 2023/02/05 13:47:13 by madore           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,16 +45,7 @@ SRC =	ft_atoi.c \
 		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c \
-		ft_lstnew_bonus.c \
-		ft_lstadd_front_bonus.c \
-		ft_lstsize_bonus.c \
-		ft_lstlast_bonus.c \
-		ft_lstadd_back_bonus.c \
-		ft_lstdelone_bonus.c \
-		ft_lstclear_bonus.c \
-		ft_lstiter_bonus.c \
-		ft_lstmap_bonus.c 
+		ft_toupper.c
 
 SRC_BONUS =	ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \

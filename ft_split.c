@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:14:02 by madore            #+#    #+#             */
-/*   Updated: 2023/02/03 17:21:30 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 12:30:36 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,35 +43,33 @@ static int	wordlen(char const *str, char c)
 
 static int	freeandquit(char **s, int i)
 {
-	int j;
+	int	j;
 
 	j = 0;
 	if (s[i])
-		return(0);
+		return (0);
 	while (j < i)
 	{
 		free(s[j]);
 		j++;
 	}
 	free(s);
-	return(1);
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	int		nbstr;
 	int		j;
 	int		i;
 	int		k;
 
-	nbstr = findnbstr(s, c);
-	split = malloc(sizeof(char *) * (nbstr + 1));
+	split = malloc(sizeof(char *) * (findnbstr(s, c) + 1));
 	if (split == NULL)
 		return (NULL);
 	j = 0;
 	i = 0;
-	while (j < nbstr)
+	while (j < findnbstr(s, c))
 	{
 		while (s && s[i] != '\0' && s[i] == c)
 			i++;
@@ -81,26 +79,8 @@ char	**ft_split(char const *s, char c)
 		k = 0;
 		while (s[i] != '\0' && s[i] != c)
 			split[j][k++] = s[i++];
-		split[j][k] = '\0';
-		j++;
+		split[j++][k] = '\0';
 	}
 	split[j] = 0;
 	return (split);
 }
-
-// #include <stdio.h>
-
-// int main(int argc, char **argv)
-// {
-// 	char **splity;
-// 	int i;
-
-// 	i = 0;
-// 	(void) argv;
-// 	if (argc == 2)
-// 	{
-// 		splity = ft_split(NULL, 'B');
-// 		while (splity[i])
-// 			printf("%s\n", splity[i++]);
-// 	}
-// }

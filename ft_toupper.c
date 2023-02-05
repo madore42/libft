@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:15:09 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:57:36 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:45:01 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_toupper(int c)
 		c = c - 32;
 	return (c);
 }
-/*
-int main(void)
-{
-	char c = 'B';
-	printf("%c\n", ft_toupper(c));
-	return (0);
-}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maureen <maureen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:37:03 by madore            #+#    #+#             */
-/*   Updated: 2023/01/13 21:46:01 by maureen          ###   ########.fr       */
+/*   Updated: 2023/02/05 13:42:54 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,3 @@ char	*ft_strdup(const char *src)
 	dup[i] = '\0';
 	return (dup);
 }
-/*
-int main(int argc, char **argv)
-{
-	if (argc == 2)
-		printf("%s", ft_strdup(argv[1]));
-}*/

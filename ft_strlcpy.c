@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:24:03 by madore            #+#    #+#             */
-/*   Updated: 2023/01/23 15:08:03 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:43:47 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (j);
 }
-/*
-int main(void)
-{
-	char src[] = "coucou les pou";
-	char dest[15];
-	printf("%d", ft_strlcpy(dest, src, 20));
-	return (0);
-}*/

@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:24:35 by madore            #+#    #+#             */
-/*   Updated: 2023/01/17 16:03:31 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:42:00 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int main(void)
-{
-	char src[] = "allo coucou";
-	char dest[30];
-
-	ft_memcpy(dest, src, 6);
-	printf("%s", dest);
-	return (0);
-}*/

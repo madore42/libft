@@ -6,12 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:06:39 by madore            #+#    #+#             */
-/*   Updated: 2023/01/17 11:29:43 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:44:11 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* strmapi modifies a strign by applying a given function to each character in 
+
+/* strmapi modifies a string by applying a given function to each character in 
 string function takes 2 arguments: first is pointer to the string that will be 
 modified, second is a pointer to a function that will be applied to each
 characters in string*/

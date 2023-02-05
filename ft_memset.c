@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:42:02 by madore            #+#    #+#             */
-/*   Updated: 2023/01/23 15:05:05 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:42:22 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*
-int main(void)
-{
-	char str[30] = "Abcdefg hihi";
-	printf("Before memset => %s", str);
-	ft_memset(str, 'x', 3);
-	printf("\nAfter memset => %s\n", str);
-	return (0);
-}*/

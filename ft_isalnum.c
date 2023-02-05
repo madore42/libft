@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 12:45:21 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 13:57:20 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:39:53 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,3 @@ int	ft_isalnum(int c)
 		return (c);
 	return (0);
 }
-/*
-int main(void)
-{
-    printf("%d", ft_isalnum('8'));
-}*/

@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 11:57:43 by madore            #+#    #+#             */
-/*   Updated: 2023/01/26 16:41:24 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:39:39 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,3 @@ void	*ft_bzero(void *s, size_t n)
 	}
 	return (s);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char str[30] = "Abcdefg hihi";
-// 	ft_bzero(str, 3);
-// 	int j = 0;
-// 	while (j < 30)
-// 	{
-// 		printf("%c", str[j]);
-// 		j++;
-// 	}
-// 	printf("\n");
-// 	printf("Before bzero => %s", str);
-// 	ft_bzero(str, 3);
-// 	printf("\nAfter bzero => %s\n", str);
-// 	return (0);
-// }

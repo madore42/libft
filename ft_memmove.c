@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:13:29 by madore            #+#    #+#             */
-/*   Updated: 2023/01/22 15:14:15 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:42:07 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char src[] = "thi\xffs i\xfas \0a g\xde\xadood \0nyan\0cat\0 !\r\n";
-// 	char dest[0xF0];
-// 	int size = 33;
-// 	ft_memmove(dest, src, size);
-// 	printf("%s", dest);
-// 	return (0);
-// }

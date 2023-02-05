@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:49:12 by madore            #+#    #+#             */
-/*   Updated: 2023/01/19 15:41:25 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:44:26 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trim[i] = '\0';
 	return (trim);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char s1[] = "";
-// 	char *trimy = ft_strtrim(s1, "z x");
-// 	printf("%s\n", trimy);
-// 	return(0);
-// }
-
-//chaine de caractere a trimmer, le char set est le charactere a trimmer 
-//de la string retourne copie de la chaine s1 sans les characteres specifier
-// dans set au DEBUT et a la FIN de la chaine

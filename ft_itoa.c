@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 18:06:00 by madore            #+#    #+#             */
-/*   Updated: 2023/01/17 17:02:09 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:40:19 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char *res = ft_itoa(-756234756);
-// 	printf("%s", res);
-// }

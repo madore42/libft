@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:00 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:39:09 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 13:42:48 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ char	*ft_strchr(const char *str, int c)
 	else
 		return (NULL);
 }
-/*
-int main(void)
-{
-	const char str[] = "bonjour";
-	const char ch = 'j';
-	char *ret;
-
-	ret = ft_strchr(str, ch);
-	printf("%c\n%s", ch, ret);
-	return (0);
-}*/
