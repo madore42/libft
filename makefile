@@ -6,7 +6,7 @@
 #    By: madore <madore@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 14:36:15 by madore            #+#    #+#              #
-#    Updated: 2023/02/05 13:47:13 by madore           ###   ########.fr        #
+#    Updated: 2023/02/05 15:34:26 by madore           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,9 @@ SRC_BONUS =	ft_lstnew_bonus.c \
 			ft_lstlast_bonus.c \
 			ft_lstadd_back_bonus.c \
 			ft_lstdelone_bonus.c \
-			ft_lstiter_bonus.c 
+			ft_lstiter_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstmap_bonus.c
 
 OBJ = $(SRC:%.c=%.o)
 OBJ_BONUS = $(SRC_BONUS:%.c=%.o)

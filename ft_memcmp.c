@@ -6,12 +6,15 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/22 16:08:33 by madore            #+#    #+#             */
-/*   Updated: 2023/01/23 15:07:07 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 15:48:58 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*compare byte string s1 against byte string s2, both str are assumed to be
+n bytes long. return zero if identical, otherwise returns difference
+(treated as unsigned char values)*/
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	unsigned char	*s1;

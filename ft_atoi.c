@@ -6,12 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:15:30 by madore            #+#    #+#             */
-/*   Updated: 2023/01/26 14:42:08 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 15:36:49 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*convert string pointed to by str to int representation*/
 int	ft_atoi(const char *str)
 {
 	int	i;

@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:49:12 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 13:44:26 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/05 14:37:00 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	i = 0;
 	end = 0;
+	if (!s1 || !set)
+		return (NULL);
 	while (s1 && s1[start] != '\0' && ft_scan(s1[start], set) == 1)
 		start++;
 	while (s1 && s1[end] != '\0')
 		end++;
 	end = end - 1;
-	while (s1 && ft_scan(s1[end], set) == 1)
+	while (start < end && s1 && ft_scan(s1[end], set) == 1)
 		end--;
 	end = end + 1;
 	trim = malloc(sizeof(char) * ((end - start) + 1));
