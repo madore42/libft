@@ -6,12 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:24:03 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 13:43:47 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 15:35:44 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*copies up to dstsize - 1 from string src to dst. return lenght of src*/
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;

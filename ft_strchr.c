@@ -6,12 +6,14 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:00 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 13:42:48 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 15:07:01 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*locates first occurence of c(converted to char) in string pointed by s.
+terminating null character is part of string. return * to located character*/
 char	*ft_strchr(const char *str, int c)
 {
 	while (str && *str != '\0')

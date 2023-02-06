@@ -6,12 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:59:56 by madore            #+#    #+#             */
-/*   Updated: 2023/01/16 14:37:33 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 14:21:39 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*write str on file descriptor given, with newline*/
 void	ft_putendl_fd(char *str, int fd)
 {
 	int	i;

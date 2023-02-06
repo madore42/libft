@@ -6,12 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:18:19 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 13:43:30 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 15:32:02 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*return initial length of dst plus lenght of src*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

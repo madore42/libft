@@ -6,12 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:37:03 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 13:42:54 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 15:17:00 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*allocates memory for copy of src, does copy, returns a pointer to it.*/
 char	*ft_strdup(const char *src)
 {
 	int		size;

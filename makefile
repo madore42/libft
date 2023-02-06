@@ -6,7 +6,7 @@
 #    By: madore <madore@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 14:36:15 by madore            #+#    #+#              #
-#    Updated: 2023/02/05 15:34:26 by madore           ###   ########.fr        #
+#    Updated: 2023/02/06 16:34:08 by madore           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,10 +67,8 @@ all : $(NAME)
 $(NAME) : $(OBJ) 
 	ar -rcs $(NAME) $(OBJ)
 	
-bonus : $(BONUS)
-
-$(BONUS) : $(OBJ_BONUS) $(OBJ)
-	ar -rcs $(BONUS) $(OBJ_BONUS) $(OBJ)
+bonus : $(OBJ_BONUS) $(OBJ)
+	ar -rcs $(NAME) $(OBJ_BONUS) $(OBJ)
 
 clean :
 	rm -f $(OBJ)
@@ -80,7 +78,15 @@ re : clean
 
 fclean : clean
 	rm -f $(NAME)
-	rm -f $(BONUS)
+
+build:
+	@touch main.c
+	@echo "#include <stdio.h>" > main.c
+	@echo "#include \"libft.h\"" >> main.c
+	@echo "\t" >> main.c
+	@echo "int main(void) {" >> main.c
+	@echo "\tprintf(\"\");" >> main.c
+	@echo "}" >> main.c
 
 $(MAIN): $(NAME)
 	gcc $(CFLAGS) $(NAME) main.c -o test
@@ -88,4 +94,4 @@ $(MAIN): $(NAME)
 exe: $(MAIN)
 	./test
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus build exe

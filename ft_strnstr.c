@@ -6,12 +6,14 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:54:16 by madore            #+#    #+#             */
-/*   Updated: 2023/01/23 15:08:55 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 15:40:37 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*locates first occurence needle in haystack, not more than 'n' characters
+ are searched*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	char			c;

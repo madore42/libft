@@ -6,12 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 14:23:15 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 12:56:38 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 16:21:15 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*malloc and return new string from *s, start at start and lenght is len.*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*substr;

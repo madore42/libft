@@ -6,15 +6,14 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 12:47:46 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 13:41:32 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 15:14:11 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* alloue (avec malloc) et renvoie un nouvel element. la variable 
-membre 'content' est initialisée à l'aide de la valeur du parametre 'content'.
-la variable 'next' est initialise a null*/
+/* allow memory with malloc and return new element. varibale member content
+is inatialized with value of parameter content. next is set as NULL*/
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*tmp;

@@ -6,12 +6,13 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:13:29 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 13:42:07 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/06 14:02:04 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*copies len bytes from src to dst. return the original value dst.*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char		*d;
