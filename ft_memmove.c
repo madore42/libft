@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:13:29 by madore            #+#    #+#             */
-/*   Updated: 2023/02/06 14:02:04 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/07 14:41:47 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (char *)dest;
 	s = (const char *)src;
-	if (src == NULL && dest == NULL)
-		return (NULL);
+	if (src == NULL || dest == NULL)
+		return (dest);
 	else if (d < s)
 	{
 		while (n > 0)

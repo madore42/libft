@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:42:02 by madore            #+#    #+#             */
-/*   Updated: 2023/02/06 14:15:15 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/07 14:51:56 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*ptr;
 
 	i = 0;
+	if (!b || !len)
+		return (b);
 	ptr = (unsigned char *)b;
 	while (i < len)
 	{

@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:24:03 by madore            #+#    #+#             */
-/*   Updated: 2023/02/06 15:35:44 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/07 15:22:40 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	i = 0;
 	j = ft_strlen(src);
 	if (src == NULL || dest == NULL)
-		return (0);
+		return (j);
 	if (size > 0)
 	{
 		while (src[i] && i < (size - 1))

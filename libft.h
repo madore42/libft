@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:12:13 by maureen           #+#    #+#             */
-/*   Updated: 2023/02/05 12:34:10 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/07 14:27:20 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void*));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 int			ft_atoi(const char *str);
-void		*ft_bzero(void *s, size_t n);
+void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t count, size_t size);
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);

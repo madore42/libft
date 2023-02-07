@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:37:03 by madore            #+#    #+#             */
-/*   Updated: 2023/02/06 15:17:00 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/07 14:58:09 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *src)
 
 	i = 0;
 	size = 0;
+	if (!src)
+		return (NULL);
 	while (src && src[size] != '\0')
 		size++;
 	dup = malloc(sizeof(char) * (size + 1));

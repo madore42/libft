@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:34:53 by madore            #+#    #+#             */
-/*   Updated: 2023/02/05 15:44:36 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/07 14:53:54 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	unsigned char	*s;
 
 	s = (unsigned char *)str;
-	if (n == 0)
+	if (n == 0 || !str)
 		return (NULL);
 	while (s && n > 0)
 	{

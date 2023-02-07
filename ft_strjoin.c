@@ -6,7 +6,7 @@
 /*   By: madore <madore@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:08:27 by madore            #+#    #+#             */
-/*   Updated: 2023/02/06 15:22:18 by madore           ###   ########.fr       */
+/*   Updated: 2023/02/07 14:21:21 by madore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		size;
 
 	size = findsize(s1, s2);
+	if (!s1 || !s2)
+		return (NULL);
 	join = malloc(sizeof(char) * (size + 1));
 	if (join == NULL)
 		return (NULL);
